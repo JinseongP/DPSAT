@@ -1,0 +1,5 @@
+opt_einsum
+scipy
+pandas
+numpy
+matplotlib
