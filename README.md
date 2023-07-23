@@ -3,7 +3,7 @@
 **This is an official PyTorch implementation of DPSAT: [Differentially Private Sharpness-Aware Training](https://arxiv.org/abs/2306.05651).**
 
 
-## Environment configuration
+## 1. Environment configuration
 
 The code is based on Python 3.8+ and requires CUDA version 11.0 or higher. Follow the specific configuration steps below to set up the environment: 
 
@@ -27,52 +27,52 @@ The code is based on Python 3.8+ and requires CUDA version 11.0 or higher. Follo
    ```shell
    pip install -r requirements.txt
    ```
-## Run py code
+## 2. Run py code
 
 ### Hyperparameters:
 
 - Differtial Privacy args
 
-  - max_grad_norm: type=float, default=0.1, help='gradient clipping paramter C'
+  - max_grad_norm: default=0.1, help='gradient clipping paramter C'
 
-  - epsilon: type=float, default=3.0, help='privacy budget epsilon'
+  - epsilon: default=3.0, help='privacy budget epsilon'
 
-  - delta: type=float, default=1e-5, help='privacy budget epsilon'
+  - delta: default=1e-5, help='privacy budget epsilon'
 
 - Optimization args
 
-  - lr: type=float, default=2, help='learning rate'
+  - lr: default=2, help='learning rate'
 
-  - epochs: type=int, default=30, help='number of training epochs'
+  - epochs: default=30, help='number of training epochs'
 
-  - batch_size: type=int, default=2048, help='batch_size'
+  - batch_size: default=2048, help='batch_size'
 
-  - max_physical_batch_size: type=int, default=1024, help='number of max_physical_batch_size (for distributed training in DP)'
+  - max_physical_batch_size: default=1024, help='number of max_physical_batch_size (for distributed training in DP)'
 
-  - minimizer: type=str, default='DPSAT: help="[None, 'DPSAT' 'DPSATMomentum']"
+  - minimizer: default='DPSAT: help="[None, 'DPSAT' 'DPSATMomentum']"
 
-  - rho: type=float, default=0.0, help='perturbation radius of sharpness-aware training. **rho=0.0 for DPSGD**.'
+  - rho: default=0.0, help='perturbation radius of sharpness-aware training. **rho=0.0 for DPSGD**.'
 
 - Dataset and dataloader args
 
-  - data: type=str, default='CIFAR10': help="['CIFAR10' 'FashionMNIST' 'MNIST' 'SVHN']")
+  - data: default='CIFAR10': help="['CIFAR10' 'FashionMNIST' 'MNIST' 'SVHN']")
 
-  - model_name: type=str, default='DPNASNet_CIFAR': help= "['DPNASNet_CIFAR:'DPNASNet_FMNIST:'DPNASNet_MNIST:'Handcrafted_CIFAR:'Handcrafted_MNIST:'ResNet10']"
+  - model_name: default='DPNASNet_CIFAR': help= "['DPNASNet_CIFAR:'DPNASNet_FMNIST:'DPNASNet_MNIST:'Handcrafted_CIFAR:'Handcrafted_MNIST:'ResNet10']"
 
-  - normalization: type=bool, default=True
-  - n_class: type=int,  default=10, help='number of classification class'
+  - normalization: default=True
+  - n_class: default=10, help='number of classification class'
 
 - Saving args
 
-  - path: type=str, default="./saved/"
+  - path: default="./saved/"
 
-  - name: type=str, default="saved_name"
+  - name: default="saved_name"
 
 - GPU args
 
-  - use_gpu: type=bool, default=True, help='use gpu'
+  - use_gpu: default=True, help='use gpu'
 
-  - gpu: type=int, default=0, help='gpu'
+  - gpu: default=0, help='gpu'
 
 ### Run for DPSAT:
 
@@ -82,13 +82,13 @@ To train DPSAT, you should set rho > 0 (rho = 0.0 works the same as DPSGD).
 python main.py --rho 0.03
 ```
 
-## Run ipynb code
+## 3. Run ipynb code
 The trainer is designed to work seamlessly with the ipynb kernel, making it easy to use within Jupyter notebooks. 
 
-For usage examples, please refer to the `/examples/` folder in this repository.
+**For usage examples, please refer to the `/examples/` folder in this repository.**
 
 
-## Citation
+## 4. Citation
 ```
 @article{park2023differentially,
   title={Differentially Private Sharpness-Aware Training},
@@ -98,7 +98,7 @@ For usage examples, please refer to the `/examples/` folder in this repository.
 }
 ```
 
-## Reference
+## 5. Reference
 
 - The backbone trainer architecture of this code is based on [adversarial-defenses-pytorch](https://github.com/Harry24k/adversarial-defenses-pytorch) by the co-author, Hoki Kim. For better usage of the trainer, please refer to adversarial-defenses-pytorch.
 
