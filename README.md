@@ -76,7 +76,7 @@ The code is based on Python 3.8+ and requires CUDA version 11.0 or higher. Follo
 Set the above parameters in args. To train DPSAT, you should set rho > 0 (rho = 0.0 works the same as DPSGD). 
 
 ```shell
-python main.py --rho 0.03
+python main.py --rho 0.01
 ```
 
 ## 3. Run ipynb code
@@ -97,7 +97,7 @@ The trainer is designed to work seamlessly with the ipynb kernel, making it easy
 
 ## 5. Reference
 
-- **The backbone trainer architecture of this code is based on [adversarial-defenses-pytorch](https://github.com/Harry24k/adversarial-defenses-pytorch) by the co-author, Hoki Kim. For better usage of the trainer, please refer to adversarial-defenses-pytorch (will be updated soon!)**
+- The backbone trainer architecture of this code is based on [adversarial-defenses-pytorch](https://github.com/Harry24k/adversarial-defenses-pytorch) by the co-author, Hoki Kim. For better usage of the trainer, please refer to adversarial-defenses-pytorch.
 
 - Furthermore, we use [Opacus](https://github.com/pytorch/opacus) version 1.2.0 to ensure differentially private training.
 - For model architectures, refer to [DPNAS](https://github.com/TheSunWillRise/DPNAS) and [Handcrafted-DP](https://github.com/ftramer/Handcrafted-DP).
