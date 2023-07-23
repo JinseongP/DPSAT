@@ -97,7 +97,7 @@ The trainer is designed to work seamlessly with the ipynb kernel, making it easy
 
 ## 5. Reference
 
-- The backbone trainer architecture of this code is based on [adversarial-defenses-pytorch](https://github.com/Harry24k/adversarial-defenses-pytorch) by the co-author, Hoki Kim. For better usage of the trainer, please refer to adversarial-defenses-pytorch.
+- **The backbone trainer architecture of this code is based on [adversarial-defenses-pytorch](https://github.com/Harry24k/adversarial-defenses-pytorch) by the co-author, Hoki Kim. For better usage of the trainer, please refer to adversarial-defenses-pytorch (will be updated soon!)**
 
 - Furthermore, we use [Opacus](https://github.com/pytorch/opacus) version 1.2.0 to ensure differentially private training.
 - For model architectures, refer to [DPNAS](https://github.com/TheSunWillRise/DPNAS) and [Handcrafted-DP](https://github.com/ftramer/Handcrafted-DP).
