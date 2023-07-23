@@ -42,22 +42,17 @@ The code is based on Python 3.8+ and requires CUDA version 11.0 or higher. Follo
 - Optimization args
 
   - lr: default=2, help='learning rate'
-
-  - epochs: default=30, help='number of training epochs'
-
+- epochs: default=30, help='number of training epochs'
   - batch_size: default=2048, help='batch_size'
-
-  - max_physical_batch_size: default=1024, help='number of max_physical_batch_size (for distributed training in DP)'
-
-  - minimizer: default='DPSAT: help="[None, 'DPSAT' 'DPSATMomentum']"
-
-  - rho: default=0.0, help='perturbation radius of sharpness-aware training. **rho=0.0 for DPSGD**.'
-
+- max_physical_batch_size: default=1024, help='number of max_physical_batch_size (for distributed training in DP)'
+  - minimizer: default='DPSAT',  help="[None, 'DPSAT' 'DPSATMomentum']"
+- rho: default=0.0, help='perturbation radius of sharpness-aware training. **rho=0.0 for DPSGD**.'
+  
 - Dataset and dataloader args
 
-  - data: default='CIFAR10': help="['CIFAR10' 'FashionMNIST' 'MNIST' 'SVHN']")
+  - data: default='CIFAR10', help="['CIFAR10' 'FashionMNIST' 'MNIST' 'SVHN']")
 
-  - model_name: default='DPNASNet_CIFAR': help= "['DPNASNet_CIFAR:'DPNASNet_FMNIST:'DPNASNet_MNIST:'Handcrafted_CIFAR:'Handcrafted_MNIST:'ResNet10']"
+  - model_name: default='DPNASNet_CIFAR', help= "['DPNASNet_CIFAR:'DPNASNet_FMNIST:'DPNASNet_MNIST:'Handcrafted_CIFAR:'Handcrafted_MNIST:'ResNet10']"
 
   - normalization: default=True
   - n_class: default=10, help='number of classification class'
@@ -76,7 +71,7 @@ The code is based on Python 3.8+ and requires CUDA version 11.0 or higher. Follo
 
 ### Run for DPSAT:
 
-To train DPSAT, you should set rho > 0 (rho = 0.0 works the same as DPSGD). 
+Set the above parameters in args. To train DPSAT, you should set rho > 0 (rho = 0.0 works the same as DPSGD). 
 
 ```shell
 python main.py --rho 0.03
