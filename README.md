@@ -49,7 +49,7 @@ The code is based on Python 3.8+ and requires CUDA version 11.0 or higher. Follo
 
   - max_physical_batch_size: type=int, default=1024, help='number of max_physical_batch_size (for distributed training in DP)'
 
-  - minimizer: type=str, default='DPSAT: help="['DPSAT' 'DPSATMomentum']"
+  - minimizer: type=str, default='DPSAT: help="[None, 'DPSAT' 'DPSATMomentum']"
 
   - rho: type=float, default=0.0, help='perturbation radius of sharpness-aware training. **rho=0.0 for DPSGD**.'
 

@@ -29,7 +29,7 @@ parser.add_argument('--lr', type=float, default=2, help='learning rate')
 parser.add_argument('--epochs', type=int, default=30, help='number of training epochs')
 parser.add_argument('--batch_size', type=int, default=2048, help='batch_size')
 parser.add_argument('--max_physical_batch_size', type=int, default=1024, help='number of max_physical_batch_size (for distributed training in DP)')
-parser.add_argument('--minimizer', type=str, default='DPSAT', help="['DPSAT' 'DPSATMomentum']")
+parser.add_argument('--minimizer', type=str, default='DPSAT', help="[None, 'DPSAT' 'DPSATMomentum']")
 parser.add_argument('--rho', type=float, default=0.0, help='perturbation radius of sharpness-aware training. rho=0.0 for DPSGD.')
 
 # Dataset and dataloader args
