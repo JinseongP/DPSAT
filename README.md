@@ -87,11 +87,19 @@ The trainer is designed to work seamlessly with the ipynb kernel, making it easy
 
 ## 4. Citation
 ```
-@article{park2023differentially,
-  title={Differentially Private Sharpness-Aware Training},
-  author={Park, Jinseong and Kim, Hoki and Choi, Yujin and Lee, Jaewook},
-  journal={arXiv preprint arXiv:2306.05651},
-  year={2023}
+@InProceedings{park2023differentially,
+  title = 	 {Differentially Private Sharpness-Aware Training},
+  author =       {Park, Jinseong and Kim, Hoki and Choi, Yujin and Lee, Jaewook},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {27204--27224},
+  year = 	 {2023},
+  editor = 	 {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
+  volume = 	 {202},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {23--29 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v202/park23g/park23g.pdf},
+  url = 	 {https://proceedings.mlr.press/v202/park23g.html},
 }
 ```
 
